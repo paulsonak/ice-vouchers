@@ -1,0 +1,73 @@
+\documentclass[letterpaper]{article}
+\usepackage{amssymb,lmodern,forloop,arrayjobx} 
+\usepackage[newdimens]{labels}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\numberoflabels=2
+\LabelCols=2
+\LabelRows=3
+
+\LeftPageMargin=0mm
+\RightPageMargin=0mm
+\TopPageMargin=0mm
+\BottomPageMargin=0mm
+\InterLabelColumn=0mm
+\InterLabelRow=0mm
+
+\LeftLabelBorder=10mm
+\RightLabelBorder=10mm
+\TopLabelBorder=0mm
+\BottomLabelBorder=8mm
+
+% using 'forloop' and 'arrayjobx' because I could never get 'foreach' working with 'labels'
+\newarray\campNames
+
+\input{campNames.tex}
+
+\begin{document}
+\newcounter{loop}
+\forloop{loop}{1}{\value{loop}<\campNamesLength}{%
+\addresslabel{
+{
+	\large
+	
+	\begin{center}
+  	\LARGE
+	BRCH3 Ice Voucher
+	\end{center}
+	
+	\vspace{6mm}
+	
+	name: \campNames(\theloop)
+	
+	\vspace{3mm}
+	
+	\begin{center}
+	\begin{tabular}{ r c l }
+	$\square$
+  	7\emph{lb} crushed ice
+	
+	&
+	
+	\textbf{-OR-}
+	
+	& 
+	
+	$\square$
+	10\emph{lb} block ice
+	\end{tabular}
+	\end{center}
+	
+	\vspace{3mm}
+	
+	deliver to: \\
+	
+	\vspace{4mm}
+	\rule[-2mm]{87mm}{.15mm} \\
+	\vspace{8mm}
+	\rule[-2mm]{87mm}{.15mm}
+	}
+}
+}
+\end{document}

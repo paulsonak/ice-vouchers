@@ -1,0 +1,71 @@
+\documentclass[letterpaper]{article}
+\usepackage{amssymb,lmodern} 
+\usepackage[newdimens]{labels}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\numberoflabels=6
+\LabelCols=2
+\LabelRows=3
+
+\iftrue
+\LabelGridtrue
+\fi
+
+\LeftPageMargin=0mm
+\RightPageMargin=0mm
+\TopPageMargin=0mm
+\BottomPageMargin=0mm
+\InterLabelColumn=0mm
+\InterLabelRow=0mm
+
+\LeftLabelBorder=10mm
+\RightLabelBorder=10mm
+\TopLabelBorder=0mm
+\BottomLabelBorder=8mm
+
+\def\mydata{Kevin,John}
+
+\begin{document}
+\addresslabel{
+	{
+	\large
+	
+	\begin{center}
+  	\LARGE
+	BRCH3 Ice Voucher
+	\end{center}
+	
+	\vspace{6mm}
+	
+	name: \rule[-2mm]{75mm}{.15mm}
+	
+	\vspace{3mm}
+	
+	\begin{center}
+	\begin{tabular}{ r c l }
+	$\square$
+  	7\emph{lb} crushed ice
+	
+	&
+	
+	\textbf{-OR-}
+	
+	& 
+	
+	$\square$
+	10\emph{lb} block ice
+	\end{tabular}
+	\end{center}
+	
+	\vspace{3mm}
+	
+	deliver to: \\
+	
+	\vspace{4mm}
+	\rule[-2mm]{87mm}{.15mm} \\
+	\vspace{8mm}
+	\rule[-2mm]{87mm}{.15mm}
+	}
+}
+\end{document}
